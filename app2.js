@@ -1,4 +1,5 @@
-
+import React from "react";
+import ReactDOM from "react-dom/client";
 const heading1 = React.createElement("h1",{},"i'm h1 of child1");
 const heading2 = React.createElement("h2",{},"i'm h2 of child1");
 const heading3 = React.createElement("h1",{},"i'm h1 of child2");

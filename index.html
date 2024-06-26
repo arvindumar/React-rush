@@ -9,15 +9,16 @@
 
   <body>
     <div id="root"></div>
-
-    <script
+    <!-- We no longer need these cdn links as we have installed the react and
+    react-dom as node modules -->
+    <!-- <script
       crossorigin
       src="https://unpkg.com/react@18/umd/react.development.js"
     ></script>
     <script
       crossorigin
       src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
-    ></script>
+    ></script> -->
     <!-- <script>
       // const heading = React.createElement("h1", {}, "Jai Ho!");
       // const root = ReactDOM.createRoot(document.getElementById("root"));
@@ -25,6 +26,6 @@
       // root.render(para);
       // // root.render(heading);
     </script> -->
-    <script src="./app2.js"></script>
+    <script type="module" src="./app2.js"></script>
   </body>
 </html>
