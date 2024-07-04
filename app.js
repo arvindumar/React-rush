@@ -1,13 +1,31 @@
-import React from "react";
+import React, { Component } from "react";
 import ReactDOM from "react-dom/client";
-const heading1 = React.createElement("h1",{},"i'm h1 of child1");
-const heading2 = React.createElement("h2",{},"i'm h2 of child1");
-const heading3 = React.createElement("h1",{},"i'm h1 of child2");
-const heading4 = React.createElement("h2",{},"i'm h2 of child2");
-const child1 = React.createElement("div",{id: "child1"},[heading1,heading2]);
-const child2 = React.createElement("div",{id: "child2"},[heading3,heading4]);
-const parent = React.createElement("div",{id: "parent"},[child1,child2]);
 
+// ReactElement => objects => it takes three args, last is the children
+
+const heading = React.createElement("h1", { id: "heading" }, "Hello React ✌️");
+// React Functional Component
+// const Heading = () => {
+//   return <h1 className="heading">This is react ultimate course</h1>;
+// };
+const Title2 = () => {
+  return <p>This is the Title saying something about the Dom</p>;
+};
+//we can also use normal function declaration for React Component
+const Title = function () {
+  return <p>This is the Title saying something about the Dom3</p>;
+};
+const Heading2 = () => (
+  <div id="main">
+    {heading}
+    {/* we can execute a js / insert any react element using {} */}
+    <Title />
+    {/* to inject a component in another component */}
+    <h1 className="heading">This is react ultimate course</h1>
+  </div>
+);
+// Heading and Heading2 components are same
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(parent);
-// what are npm packages
+
+// root.render(heading); // this is how we render a React element
+root.render(<Heading2 />); // this is how we render a React Component
